@@ -11,6 +11,7 @@ if not args.path:
     os.system('echo argument required')
     os.system('python3 wallpaper.py --help')
     sys.exit()    
+print(os.path.abspath(args.path))
 wallpapers_path = f'~/{args.path}'
 data = os.listdir(os.path.expanduser(wallpapers_path))
 
@@ -21,6 +22,7 @@ i = 0
 
 while i<len(wallpapers):
     os.system(f'gsettings set org.gnome.desktop.background picture-uri-dark {wallpapers[i]}')
+    print(wallpapers[i])
     i+=1
     if i==len(wallpapers):i=0
     time.sleep(20.0)
