@@ -1,7 +1,6 @@
 import os 
 import argparse
 import time 
-import sys 
 from random import choice 
 
 parser = argparse.ArgumentParser()
