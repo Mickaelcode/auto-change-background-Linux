@@ -11,10 +11,10 @@ if not args.path:
     os.system('echo argument required')
     os.system('python3 wallpaper.py --help')
     sys.exit()    
-else:print('yes')
-data = os.listdir(os.path.expanduser(f'~/{args.path}'))
+wallpapers_path = f'~/{args.path}'
+data = os.listdir(os.path.expanduser(wallpapers_path))
 
-wallpapers = list(map(lambda n : f"file:///home/mickael/Pictures/{n}",data))
+wallpapers = list(map(lambda n : f"file://{wallpapers_path}/{n}",data))
 
 
 i = 0 
