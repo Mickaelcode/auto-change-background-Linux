@@ -1,8 +1,15 @@
 import os 
+import argparse
 import time 
 
+parser = argparse.ArgumentParser()
+parser.add_argument('-P','--path',help="directory background's path")
 
-data = os.listdir('/home/mickael/Pictures')
+args = parser.parse_args()
+print(args)
+
+
+data = os.listdir(os.path.expanduser('~/Pictures'))
 
 wallpapers = list(map(lambda n : f"file:///home/mickael/Pictures/{n}",data))
 
