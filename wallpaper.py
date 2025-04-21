@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-P','--path',help="directory background's path")
 
 args = parser.parse_args()
-print(args)
+print(f'path picture = {args.path}')
 
 
 data = os.listdir(os.path.expanduser('~/Pictures'))
