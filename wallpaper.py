@@ -6,10 +6,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-P','--path',help="directory background's path")
 
 args = parser.parse_args()
-print(f'path picture = {args.path}')
+if not args:
+    os.system('echo argument required')
+    os.system('python3 wallpaper.py --help')
+    exit
 
-
-data = os.listdir(os.path.expanduser('~/Pictures'))
+data = os.listdir(os.path.expanduser(f'~/{args.path}'))
 
 wallpapers = list(map(lambda n : f"file:///home/mickael/Pictures/{n}",data))
 
