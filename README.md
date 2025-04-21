@@ -1,6 +1,13 @@
 # How to install
 - clone the repo or download the zip
 
+# Requirement
+- Make sure that you have been installed python(3.*) and these module:
+  - os
+  - argparse
+  - time
+  - random
+
 # How to use it
 - You need to create a directory that have your all pictures background (eg : in `/home/user_name/Pictures`)
 - Run the command `python3 wallpaper.py -P<path> -T<time>`
