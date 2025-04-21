@@ -4,18 +4,18 @@ import time
 import sys 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-P','--path',help="directory background's path")
+parser.add_argument('-P','--path',help="directory background's all path")
 args = parser.parse_args()
+path = args.path 
 
-if not args.path:
+if not path:
     os.system('echo argument required')
     os.system('python3 wallpaper.py --help')
-    sys.exit()    
+    sys.exit()
 
-user = os.getlogin()
-data = os.listdir(os.path.expanduser(f"~/{args.path}"))
+data = os.listdir(path)
 
-wallpapers = list(map(lambda n : f"file:///home/{user}/{args.path}/{n}",data))
+wallpapers = list(map(lambda n : f"file://{path}/{n}",data))
 
 
 i = 0 
