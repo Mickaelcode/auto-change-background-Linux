@@ -13,5 +13,5 @@
 
 - Click "Add" and fill in the details:
   - Name: Wallpaper Changer
-  - Command: `python3 /path/to/the/wallpaper.py -P "/path/to/your/wallpapers" -T<time>`
+  - Command: `python3 /path/to/the/wallpaper.py -P "/path/to/your/wallpapers_directory" -T<time>`
   - Comment: Changes wallpaper periodically
