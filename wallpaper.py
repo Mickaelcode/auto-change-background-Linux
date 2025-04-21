@@ -8,7 +8,8 @@ parser.add_argument('-P','--path',help="directory background's path")
 
 args = parser.parse_args()
 if not args.path:
-    print('None')
+    os.system('echo argument required')
+    os.system('python3 wallpaper.py --help')
     sys.exit()    
 else:print('yes')
 data = os.listdir(os.path.expanduser(f'~/{args.path}'))
