@@ -1,7 +1,7 @@
-### INSTALATION
+## INSTALATION
 - clone the repo or download the zip
 
-### USE
+## USE
 - You need to create a directory that have your all pictures background (eg : in `/home/user_name/Pictures`)
 - Run the command `python3 wallpaper.py -P<path> -T<time>`
   - the `-P` : path to your pictures directory ; eg: if in `Pictures/` from `home/` that must be => ` python3 wallpaper.py -P /home/user_name/Pictures` 
